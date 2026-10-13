@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" style="-fx-padding: 15;" prefWidth="450.0" prefHeight="400.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mygradleproject.controller.TaskDialogController">
+    <Label fx:id="headerLabel" text="Aufgaben für Benutzer" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+    
+    <TableView fx:id="taskTable" fx:id="taskTable" id="taskTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="taskTitleColumn" text="Titel" prefWidth="200"/>
+            <TableColumn fx:id="taskDateColumn" text="Fälligkeit" prefWidth="120"/>
+            <TableColumn fx:id="taskDeleteColumn" text="Löschen" prefWidth="90"/>
+        </columns>
+    </TableView>
+    
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <TextField fx:id="taskTitleField" fx:id="taskTitleField" id="taskTitleField" promptText="Neuer Task Titel" HBox.hgrow="ALWAYS"/>
+        <DatePicker fx:id="taskDatePicker" fx:id="taskDatePicker" id="taskDatePicker" prefWidth="130"/>
+        <Button fx:id="addTaskButton" id="addTaskButton" text="Hinzufügen" onAction="#handleAddTask"/>
+    </HBox>
+    
+    <Label fx:id="dialogErrorLabel" style="-fx-text-fill: #ff4d4d;"/>
+    <Button fx:id="closeDialogButton" id="closeDialogButton" text="Schließen" onAction="#handleClose" styleClass="strong" alignment="CENTER"/>
+</VBox>
