@@ -1,2 +1,2 @@
-# myProgs
+# MyGradleProject
 Diverse Programme
